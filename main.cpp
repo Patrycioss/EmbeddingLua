@@ -17,11 +17,11 @@ int main() {
 	//Add 2 because will remove first and last result because better for tests
 	count += 2;
 
-	PalindromeTest test(lua);
+	PlayerTest test(lua);
 	std::chrono::nanoseconds lua_total{};
 	std::chrono::nanoseconds cpp_total{};
 	
-	int max = (1e6);
+	int max = (10);
 	
 	for (int i = 0; i < count; i++)
 	{

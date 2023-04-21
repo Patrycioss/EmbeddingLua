@@ -69,10 +69,10 @@ public:
 			
 			lua_pop(m_lua, 1); // Pops objectTable
 			
-			for (int& i : numbers)
-			{
-				std::cout << i << ", ";
-			}
+//			for (int& i : numbers)
+//			{
+//				std::cout << i << ", ";
+//			}
 		}
 		
 		return m_luaTimer.Stop();
