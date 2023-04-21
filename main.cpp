@@ -17,12 +17,11 @@ int main() {
 	//Add 2 because will remove first and last result because better for tests
 	count += 2;
 
-	PlayerTest test(lua);
-
+	PalindromeTest test(lua);
 	std::chrono::nanoseconds lua_total{};
 	std::chrono::nanoseconds cpp_total{};
 	
-	int max = (10);
+	int max = (1e6);
 	
 	for (int i = 0; i < count; i++)
 	{
@@ -44,8 +43,8 @@ int main() {
 	auto lua_average = lua_total/(count-2);
 	
 	printf("\n \n");
-	std::cout << "CPP average: " << cpp_average.count() << " --- LUA average: " << lua_average.count() << std::endl; 
-	
+	std::cout << "CPP average: " << cpp_average.count() << " ns --- LUA average: " << lua_average.count() << " ns" << std::endl; 
+	std::cout << "CPP total: " << cpp_total.count() << " ns --- LUA total: " << lua_total.count() << " ns" << std::endl;
 	
 //	const std::function lua_test = lua_test_calculation2;
 //	const std::function cpp_test = cpp_test_calculation2;
