@@ -55,11 +55,13 @@ public:
 			{
 				lua_pushvalue(m_lua, -2);
 				palindromes.push_back((int) lua_tonumber(m_lua,-2));
-//				printf("%d-", (int)lua_tointeger(m_lua,-2));
 				lua_pop(m_lua, 2);
 			}
 			lua_pop(m_lua, 1);
 		}
 		return m_luaTimer.Stop();
 	}
+
+//				printf("%d-", (int)lua_tointeger(m_lua,-2));
+	
 };

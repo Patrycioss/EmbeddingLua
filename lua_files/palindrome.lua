@@ -1,3 +1,4 @@
+
 function GetPalindromesUntil(max)
     local palindromes = {}
     local i = 1
