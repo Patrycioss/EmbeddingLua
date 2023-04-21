@@ -11,10 +11,10 @@ public:
 	};
 };
 
-class PlayerTest : Test
+class ObjectTest : Test
 {
 public:
-	explicit PlayerTest(lua_State* lua) : Test(lua, "player.lua"){};
+	explicit ObjectTest(lua_State* lua) : Test(lua, "player.lua"){};
 	
 	std::chrono::nanoseconds cpp_test(const int& pCount)
 	{
@@ -27,12 +27,6 @@ public:
 			players.emplace_back(i);
 		}
 		
-//		for (Player& player : players)
-//		{
-//			printf("%d, ", player.number);
-//		}
-//		printf("\n");
-		
 		return m_luaTimer.Stop();
 	}
 	
@@ -44,11 +38,8 @@ public:
 		
 		if (CheckLua(m_lua, lua_pcall(m_lua, 1,1,0)))
 		{
-			
 			lua_pushvalue(m_lua, -1); //-1=> objectTable;
-
 			lua_pushnil(m_lua); //-1 => nil, -2 => objectTable;
-			
 			
 			std::vector<int> numbers;
 			
@@ -57,7 +48,6 @@ public:
 				if (lua_istable(m_lua, -1))
 				{
 					lua_pushnil(m_lua); // -1 => nil, -2 => objectValue, -3 => objectKey, -4 => objectTable
-					
 					while(lua_next(m_lua,-2)) // -1 => varValue, -2 => varKey, -3 => objectValue, -4 => objectKey, -5 => objectTable 
 					{
 						numbers.push_back(lua_tonumber(m_lua,-1));
@@ -66,15 +56,8 @@ public:
 				}
 				lua_pop(m_lua, 1); // -1 => objectKey, -2 => objectTable 
 			}//Pops objectKey
-			
 			lua_pop(m_lua, 1); // Pops objectTable
-			
-//			for (int& i : numbers)
-//			{
-//				std::cout << i << ", ";
-//			}
 		}
-		
 		return m_luaTimer.Stop();
 	}
 };

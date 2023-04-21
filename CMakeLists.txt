@@ -7,7 +7,7 @@ add_subdirectory(lua-5.4.4)
 
 set(TESTS
         "tests/PalindromeTest.hpp"
-        tests/Timers.hpp tests/Test.hpp tests/PlayerTest.hpp)
+        tests/Timers.hpp tests/Test.hpp tests/ObjectTest.hpp)
 
 
 add_executable(LuaTesting main.cpp ${TESTS})
