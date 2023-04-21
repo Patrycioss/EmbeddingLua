@@ -1,0 +1,5 @@
+﻿100000
+
+
+CPP average: 1485 ns --- LUA average: 40893 ns
+CPP total: 148590300 ns --- LUA total: 4089393500 ns

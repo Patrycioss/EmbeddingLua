@@ -35,9 +35,9 @@ int main() {
 			cpp_total += cpp_time;
 			lua_total += lua_time;
 		}
-		else std::cout << "!!IGNORED!! ";
-		
-		std::cout<<"CPP: " << cpp_time.count() << " ns , LUA: " << lua_time.count() << " ns" << std::endl;
+//		else std::cout << "!!IGNORED!! ";
+//		
+//		std::cout<<"CPP: " << cpp_time.count() << " ns , LUA: " << lua_time.count() << " ns" << std::endl;
 	}
 	
 	auto cpp_average = cpp_total/(count-2);

@@ -2,7 +2,6 @@
 
 #include "Test.hpp"
 
-
 int function(lua_State* pState)
 {
 	return 0;
