@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_subdirectory(lua-5.4.4)
 
-set(TESTS
-        "tests/PalindromeTest.hpp"
-        tests/Timers.hpp tests/Test.hpp tests/ObjectTest.hpp)
+set(src/tests
+        "src/tests/PalindromeTest.hpp"
+        src/tests/Timers.hpp src/tests/Test.hpp src/tests/ObjectTest.hpp src/tests/CPP_FunctionTest.hpp src/lua_tests.hpp)
 
 
 add_executable(LuaTesting main.cpp ${TESTS})
