@@ -15,4 +15,3 @@ function SpawnPlayers(n)
     end
     return players
 end
-

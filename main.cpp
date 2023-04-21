@@ -5,7 +5,7 @@
 
 #include "lua_help.hpp"
 #include "tests/PalindromeTest.hpp"
-#include "tests/PlayerTest.hpp"
+#include "tests/ObjectTest.hpp"
 
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 	//Add 2 because will remove first and last result because better for tests
 	count += 2;
 
-	PlayerTest test(lua);
+	ObjectTest test(lua);
 	std::chrono::nanoseconds lua_total{};
 	std::chrono::nanoseconds cpp_total{};
 	
