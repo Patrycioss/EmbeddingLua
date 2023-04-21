@@ -1,0 +1,19 @@
+﻿10
+!!IGNORED!! CPP: 3400 ns , LUA: 23700 ns
+CPP: 5100 ns , LUA: 20500 ns
+CPP: 5300 ns , LUA: 22200 ns
+CPP: 6400 ns , LUA: 19200 ns
+CPP: 3500 ns , LUA: 17800 ns
+CPP: 2400 ns , LUA: 12900 ns
+CPP: 3600 ns , LUA: 40800 ns
+CPP: 2500 ns , LUA: 13300 ns
+CPP: 2300 ns , LUA: 13400 ns
+CPP: 2600 ns , LUA: 11600 ns
+CPP: 2000 ns , LUA: 11100 ns
+!!IGNORED!! CPP: 1900 ns , LUA: 10300 ns
+
+
+CPP average: 3570 ns --- LUA average: 18280 ns
+CPP total: 35700 ns --- LUA total: 182800 ns
+
+Process finished with exit code 0
